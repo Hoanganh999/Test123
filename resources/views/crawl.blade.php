@@ -544,7 +544,7 @@
         }
 
         $("#movies-get-handle").click(async function() {
-            const apiDomain = "{{ config('ophim_crawler.domain', 'https://apii.online/apii') }}";
+            const apiDomain = "{{ config('ophim_crawler.domain', 'https://apii.online/api') }}";
             let params = $("select[name=movies-get-params]").find(":selected").val();
 
             const response = await fetch("{{ backpack_url('plugin/ophim-crawler/get-movies') }}", {
